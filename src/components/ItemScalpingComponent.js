@@ -44,6 +44,7 @@ class ScalpingItem extends Component {
           <View width={66}>
             <Text style={styles.textKey1}>Avg Overall</Text>
             <Text style={styles.textKey1}>Ratio</Text>
+            <Text style={styles.textKey1}>Ratio</Text>
           </View>
           <View width={50}>
             <Text style={styles.textKey2}>{this.props.values[3]}</Text>
@@ -51,6 +52,10 @@ class ScalpingItem extends Component {
             <Text style={styles.textKey2}>{this.props.values[5]}</Text>
           </View>
           <View style={styles.divide2}/>
+          <View style={styles.last}>
+            <Text style={styles.textKey5}>{this.props.values[6]}</Text>
+            <Text style={styles.textKey6}>Gain</Text>
+          </View>
         </View>
       </View>
     );
@@ -76,6 +81,11 @@ const styles = StyleSheet.create({
     borderWidth     : 1,
     borderColor     : '#373334',
     flexDirection   : 'row'
+  },
+  textKey1:{
+    fontSize      : 11,
+    marginTop       :5,
+    color         : '#373334'
   },
   textKey2:{
     fontSize      : 12,
