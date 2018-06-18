@@ -1,6 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 import * as GLOBAL from '@global'
 // create a component
@@ -35,6 +35,15 @@ const styles = StyleSheet.create({
     backgroundColor : 'transparent',
     position        : 'relative'
   },
+  mainContainer: {
+    width           : GLOBAL.getDeviceWidth(480),
+    height          : GLOBAL.getDeviceHeight(160),
+    paddingTop      : GLOBAL.getDeviceHeight(15),
+    justifyContent  : 'center',
+    borderWidth     : 1,
+    borderColor     : '#ff4d71',
+    flexDirection   : 'row'
+  },
   leftRectangle: {
     position        : 'absolute',
     width           : GLOBAL.getDeviceHeight(34),
@@ -61,7 +70,12 @@ const styles = StyleSheet.create({
   detailFont: {
     fontSize        : 14,
     color           : '#ffffff',
+  },
+  detailvalue: {
+    fontWeight      : 'bold',
+    textAlign       : 'center'
   }
 });
 
+//make this component available to the app
 export default ItemChangingComponent;
