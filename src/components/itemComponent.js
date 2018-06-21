@@ -1,5 +1,7 @@
+//import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native';
+import * as GLOBAL from '@global';
 
 // create a component
 class ItemComponent extends Component {
@@ -33,6 +35,10 @@ class ItemComponent extends Component {
         return require('@assets/images/home/GBPUSD.png');
       case 'USDJPY':
         return require('@assets/images/home/USDJPY.png');
+      case 'AUDUSD':
+        return require('@assets/images/home/AUDUSD.png');
+      case 'USDCHF':
+        return require('@assets/images/home/USDCHF.png');
       case 'USDCAD':
         return require('@assets/images/home/USDCAD.png');
       case 'NZDUSD':
@@ -57,6 +63,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     marginLeft: GLOBAL.getDeviceWidth(36),
+    marginRight: GLOBAL.getDeviceWidth(36),
     borderWidth: 2,
     borderColor: '#373334',
     height: '100%'
@@ -79,6 +86,8 @@ const styles = StyleSheet.create({
     width     : GLOBAL.getDeviceWidth(166),
     height    : GLOBAL.getDeviceHeight(136),
     marginRight: GLOBAL.getDeviceWidth(21),
+    backgroundColor: '#ff4d71',
+    // marginLeft: GLOBAL.getDeviceWidth(43),
     // alignItems: 'center',
     justifyContent: 'center'
   },
@@ -90,6 +99,8 @@ const styles = StyleSheet.create({
   ButtonText: {
     color : '#fff',
     fontSize: 16,
+    textAlign: 'center',
+    fontWeight: 'bold',    
   }
 });
 
